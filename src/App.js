@@ -21,10 +21,16 @@ function App() {
       </selection>
     );
   }
-  const handleClick = () => {
-    console.log("clicked");
+  const handleClick = (event) => {
+    console.log(event);
   };
-
+  function MyButton(props) {
+    return (
+      <button onClick={props.onClick} style={{ color: "red" }}>
+        {props.children}
+      </button>
+    );
+  }
   return (
     <>
       {error && <h1>Error</h1>}
@@ -50,7 +56,7 @@ function App() {
         <h1>Hello Worls</h1>
       </Comment>
 
-      <button onClick={handleClick}>Click</button>
+      <MyButton onClick={handleClick}>Click Me</MyButton>
     </>
     // <div className="App">
     //   <header className="App-header">
