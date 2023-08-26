@@ -25,11 +25,7 @@ function App() {
     console.log(event);
   };
   function MyButton(props) {
-    return (
-      <button {...props} style={{ color: "red" }}>
-        {props.children}
-      </button>
-    );
+    return <button {...props} style={{ color: "red" }} />;
   }
   return (
     <>
