@@ -1,6 +1,15 @@
 # Getting Started with Create React App
 
-## Emmet not working in Visual Studio Code issue [Solved]
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
+  - [Emmet](#emmet)
+    - [Emmet not working in Visual Studio Code issue \[Solved\]](#emmet-not-working-in-visual-studio-code-issue-solved)
+    - [Only updating the configuration for your current project](#only-updating-the-configuration-for-your-current-project)
+
+## Emmet
+
+[Emmet — the essential toolkit for web-developers](https://github.com/mehradi-github/ref-landingpage-photography#emmet--the-essential-toolkit-for-web-developers)
+
+### Emmet not working in Visual Studio Code issue [Solved]
 
 1. Press Ctrl + Shift + P (or Command + Shift + P on macOS).
 2. Type user settings json.
