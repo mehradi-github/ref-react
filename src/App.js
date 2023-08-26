@@ -25,6 +25,9 @@ function App() {
         Input:
       </lable>
       <input {...props} placeholder="User" />
+
+      <Hello name="name1" />
+      <Hello name="name2" />
     </>
     // <div className="App">
     //   <header className="App-header">
@@ -44,5 +47,7 @@ function App() {
     // </div>
   );
 }
-
+function Hello(props) {
+  return <h1>Hello {props.name}</h1>;
+}
 export default App;
