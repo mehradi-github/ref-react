@@ -8,6 +8,9 @@ function App() {
     <>
       {error && <h1>Error</h1>}
       {error || <h1>Success</h1>}
+
+      <lable htmlFor="input">Input:</lable>
+      <input type="text" id="input" maxLength="3" />
     </>
     // <div className="App">
     //   <header className="App-header">
