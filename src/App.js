@@ -5,9 +5,28 @@ function App() {
   const error = true;
   const props = {
     id: "input",
-    maxLenght: "3",
+    maxlenght: "3",
     type: "text",
   };
+  function Hello({ name = "user" }) {
+    return <h1>Hello {name}</h1>;
+  }
+  function Comment({ username, time, children }) {
+    return (
+      <selection>
+        <p>
+          {username} comment at {time}
+        </p>
+        {children}
+      </selection>
+    );
+  }
+  const handleClick = (event) => {
+    console.log(event);
+  };
+  function MyButton(props) {
+    return <button {...props} style={{ color: "red" }} />;
+  }
   return (
     <>
       {error && <h1>Error</h1>}
@@ -32,6 +51,8 @@ function App() {
       <Comment username="Alex" time={new Date().toString()}>
         <h1>Hello Worls</h1>
       </Comment>
+
+      <MyButton onClick={handleClick}>Click Me</MyButton>
     </>
     // <div className="App">
     //   <header className="App-header">
@@ -49,19 +70,6 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-  );
-}
-function Hello({ name = "user" }) {
-  return <h1>Hello {name}</h1>;
-}
-function Comment({ username, time, children }) {
-  return (
-    <selection>
-      <p>
-        {username} comment at {time}
-      </p>
-      {children}
-    </selection>
   );
 }
 export default App;
