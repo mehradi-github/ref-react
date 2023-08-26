@@ -16,6 +16,9 @@ function App() {
       <lable
         style={{
           paddingLeft: "10px",
+          fontFamily: "sans-serif",
+          fontWeight: "Bold",
+          fontSize: "14px",
         }}
         htmlFor="input"
       >
