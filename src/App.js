@@ -13,7 +13,14 @@ function App() {
       {error && <h1>Error</h1>}
       {error || <h1>Success</h1>}
 
-      <lable htmlFor="input">Input:</lable>
+      <lable
+        style={{
+          paddingLeft: "10px",
+        }}
+        htmlFor="input"
+      >
+        Input:
+      </lable>
       <input {...props} placeholder="User" />
     </>
     // <div className="App">
