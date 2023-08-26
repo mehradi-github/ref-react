@@ -29,6 +29,9 @@ function App() {
       <Hello name="name1" />
       <Hello name="name2" />
       <Hello />
+      <Comment username="Alex" time={new Date().toString()}>
+        <h1>Hello Worls</h1>
+      </Comment>
     </>
     // <div className="App">
     //   <header className="App-header">
@@ -50,5 +53,15 @@ function App() {
 }
 function Hello({ name = "user" }) {
   return <h1>Hello {name}</h1>;
+}
+function Comment({ username, time, children }) {
+  return (
+    <selection>
+      <p>
+        {username} comment at {time}
+      </p>
+      {children}
+    </selection>
+  );
 }
 export default App;
