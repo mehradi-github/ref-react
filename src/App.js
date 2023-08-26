@@ -3,11 +3,28 @@ import "./App.css";
 
 function App() {
   const error = true;
-
+  const props = {
+    id: "input",
+    maxLenght: "3",
+    type: "text",
+  };
   return (
     <>
       {error && <h1>Error</h1>}
       {error || <h1>Success</h1>}
+
+      <lable
+        style={{
+          paddingLeft: "10px",
+          fontFamily: "sans-serif",
+          fontWeight: "Bold",
+          fontSize: "14px",
+        }}
+        htmlFor="input"
+      >
+        Input:
+      </lable>
+      <input {...props} placeholder="User" />
     </>
     // <div className="App">
     //   <header className="App-header">
