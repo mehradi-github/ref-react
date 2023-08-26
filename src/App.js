@@ -3,14 +3,18 @@ import "./App.css";
 
 function App() {
   const error = true;
-
+  const props = {
+    id: "input",
+    maxLenght: "3",
+    type: "text",
+  };
   return (
     <>
       {error && <h1>Error</h1>}
       {error || <h1>Success</h1>}
 
       <lable htmlFor="input">Input:</lable>
-      <input type="text" id="input" maxLength="3" />
+      <input {...props} placeholder="User" />
     </>
     // <div className="App">
     //   <header className="App-header">
