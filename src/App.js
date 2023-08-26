@@ -26,7 +26,7 @@ function App() {
   };
   function MyButton(props) {
     return (
-      <button onClick={props.onClick} style={{ color: "red" }}>
+      <button {...props} style={{ color: "red" }}>
         {props.children}
       </button>
     );
