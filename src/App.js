@@ -28,6 +28,7 @@ function App() {
 
       <Hello name="name1" />
       <Hello name="name2" />
+      <Hello />
     </>
     // <div className="App">
     //   <header className="App-header">
@@ -47,7 +48,7 @@ function App() {
     // </div>
   );
 }
-function Hello(props) {
-  return <h1>Hello {props.name}</h1>;
+function Hello({ name = "user" }) {
+  return <h1>Hello {name}</h1>;
 }
 export default App;
