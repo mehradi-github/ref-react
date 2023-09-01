@@ -8,10 +8,10 @@ function App() {
     maxlenght: "3",
     type: "text",
   };
-  function Hello({ name = "user" }) {
+  const Hello = ({ name = "user" }) => {
     return <h1>Hello {name}</h1>;
-  }
-  function Comment({ username, time, children }) {
+  };
+  const Comment = ({ username, time, children }) => {
     return (
       <selection>
         <p>
@@ -20,7 +20,7 @@ function App() {
         {children}
       </selection>
     );
-  }
+  };
   const handleClick = (event) => {
     console.log(event);
   };
