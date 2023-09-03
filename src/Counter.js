@@ -6,7 +6,7 @@ const Counter = ({ initStart = 0 }) => {
     <Fragment>
       <button
         onClick={() => {
-          setCount(count + 1);
+          setCount((prevCount) => prevCount + 1);
         }}
       >
         Increment
