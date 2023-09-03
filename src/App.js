@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
   const error = true;
@@ -8,6 +9,8 @@ function App() {
     maxlenght: "3",
     type: "text",
   };
+
+  const [count, setCount] = useState(5);
   const Hello = ({ name = "user" }) => {
     return <h1>Hello {name}</h1>;
   };
@@ -53,6 +56,14 @@ function App() {
       </Comment>
 
       <MyButton onClick={handleClick}>Click Me</MyButton>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        Increment
+      </button>
+      <h1>{count}</h1>
     </>
     // <div className="App">
     //   <header className="App-header">
