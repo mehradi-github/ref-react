@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./Counter";
 import Reducer from "./Reducer";
+import MyTimer from "./ref";
 
 function App() {
   const error = true;
@@ -58,6 +59,7 @@ function App() {
       <MyButton onClick={handleClick}>Click Me</MyButton>
       <Counter initStart={8} />
       <Reducer />
+      <MyTimer />
     </>
     // <div className="App">
     //   <header className="App-header">
