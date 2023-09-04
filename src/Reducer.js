@@ -14,6 +14,7 @@ const Reducer = () => {
 
   useEffect(() => {
     console.log("mount");
+    return console.log("unmount");
   }, []);
 
   useEffect(() => {
