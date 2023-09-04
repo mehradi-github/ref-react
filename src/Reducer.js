@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 const reducer = (state, action) => {
   switch (action.type) {
     case "increment":
@@ -11,6 +11,16 @@ const reducer = (state, action) => {
 };
 const Reducer = () => {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  useEffect(() => {
+    console.log("mount");
+    return console.log("unmount");
+  }, []);
+
+  useEffect(() => {
+    console.log("render");
+  });
+
   return (
     <>
       <button onClick={() => dispatch({ type: "increment", num: 1 })}>
