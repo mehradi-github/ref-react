@@ -13,6 +13,10 @@ const Reducer = () => {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
 
   useEffect(() => {
+    console.log("mount");
+  }, []);
+
+  useEffect(() => {
     console.log("render");
   });
 
