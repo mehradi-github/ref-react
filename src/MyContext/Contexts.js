@@ -11,14 +11,16 @@ export const UserContext = createContext({
 const user1 = { name: "user 1", course: "course 1" };
 const user2 = { name: "user 2", course: "course 2" };
 
-export const UserContextProvider = ({ childern }) => {
+export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(user1);
 
-  const toggleUser = user === user1 ? user2 : user1;
-
+  const toggleUser = () => {
+    user === user1 ? setUser(user2) : setUser(user1);
+  };
+  console.log(user);
   return (
     <UserContext.Provider value={{ user, toggleUser }}>
-      {childern}
+      {children}
     </UserContext.Provider>
   );
 };

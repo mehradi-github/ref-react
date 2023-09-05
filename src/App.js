@@ -5,6 +5,7 @@ import Reducer from "./Reducer";
 import MyTimer from "./MyTimer";
 import MyInput from "./MyInput";
 import Handler from "./MyImperative/Handler";
+import MyContext from "./MyContext";
 
 function App() {
   const error = true;
@@ -35,7 +36,10 @@ function App() {
   }
   return (
     <>
-      <h1>Using useImperativeHandle </h1>
+      <h1>Contexts</h1>
+      <MyContext />
+
+      <h1>Imperative React</h1>
       <Handler />
 
       {error && <h1>Error</h1>}
