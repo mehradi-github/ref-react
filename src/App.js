@@ -4,6 +4,7 @@ import Counter from "./Counter";
 import Reducer from "./Reducer";
 import MyTimer from "./MyTimer";
 import MyInput from "./MyInput";
+import Handler from "./MyImperative/Handler";
 
 function App() {
   const error = true;
@@ -34,6 +35,9 @@ function App() {
   }
   return (
     <>
+      <h1>Using useImperativeHandle </h1>
+      <Handler />
+
       {error && <h1>Error</h1>}
       {error || <h1>Success</h1>}
 
