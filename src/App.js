@@ -6,6 +6,7 @@ import MyTimer from "./MyTimer";
 import MyInput from "./MyInput";
 import Handler from "./MyImperative/Handler";
 import MyContext from "./MyContext";
+import Mylist from "./MyList";
 
 function App() {
   const error = true;
@@ -36,6 +37,8 @@ function App() {
   }
   return (
     <>
+      <h1>MyList</h1>
+      <Mylist />
       <h1>Contexts</h1>
       <MyContext />
 
