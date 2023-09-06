@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import MyButton from "./MyButton";
+import { useState, useMemo, useCallback, lazy, Suspense } from "react";
+const MyButton = lazy(() => import("./MyButton"));
 const MyPerformance = () => {
   const [num, setNum] = useState(10);
   const [log, setLog] = useState("");
@@ -8,6 +8,10 @@ const MyPerformance = () => {
     console.log("calcualting fib value");
     return fib(num);
   }, [num]);
+
+  const onClickLog = useCallback(() => {
+    console.log(log);
+  }, [log]);
   return (
     <>
       <p>
@@ -19,13 +23,11 @@ const MyPerformance = () => {
         onChange={(e) => setNum(parseInt(e.target.value))}
       />
       <input type="text" value={log} onChange={(e) => setLog(e.target.value)} />
-      <MyButton
-        onClick={() => {
-          console.log(log);
-        }}
-      >
-        Log
-      </MyButton>
+      {log.length > 0 ? (
+        <Suspense fallback=" Loading ...">
+          <MyButton onClick={onClickLog}>Log</MyButton>
+        </Suspense>
+      ) : null}
     </>
   );
 };
