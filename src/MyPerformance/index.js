@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import MyButton from "./MyButton";
 const MyPerformance = () => {
   const [num, setNum] = useState(10);
   const [log, setLog] = useState("");
+
+  const fibValue = useMemo(() => {
+    console.log("calcualting fib value");
+    return fib(num);
+  }, [num]);
   return (
     <>
       <p>
-        Fib {num} is {fib(num)}
+        Fib {num} is {fibValue}
       </p>
       <input
         type="number"
