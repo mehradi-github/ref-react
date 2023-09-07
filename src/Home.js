@@ -1,16 +1,6 @@
-import logo from "./logo.svg";
-import "./App.css";
 import Counter from "./Counter";
-import Reducer from "./Reducer";
 import MyTimer from "./MyTimer";
 import MyInput from "./MyInput";
-import Handler from "./MyImperative/Handler";
-import MyContext from "./MyContext";
-import Mylist from "./MyList";
-import MyPerformance from "./MyPerformance";
-import MyHook from "./MyHook";
-import { Routes, Route } from "react-router-dom";
-import NoPage from "./NoPage";
 
 function Home() {
   const error = true;
@@ -41,19 +31,6 @@ function Home() {
   }
   return (
     <>
-      <h1>Writing Custom Hooks</h1>
-      <MyHook />
-      <h1>Performance</h1>
-      <MyPerformance />
-
-      <h1>MyList</h1>
-      <Mylist />
-      <h1>Contexts</h1>
-      <MyContext />
-
-      <h1>Imperative React</h1>
-      <Handler />
-
       {error && <h1>Error</h1>}
       {error || <h1>Success</h1>}
 
@@ -79,7 +56,6 @@ function Home() {
 
       <MyButton onClick={handleClick}>Click Me</MyButton>
       <Counter initStart={8} />
-      <Reducer />
       <MyTimer />
       <MyInput />
     </>
