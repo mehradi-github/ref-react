@@ -9,6 +9,8 @@ import MyContext from "./MyContext";
 import Mylist from "./MyList";
 import MyPerformance from "./MyPerformance";
 import MyHook from "./MyHook";
+import { Routes, Route } from "react-router-dom";
+import NoPage from "./NoPage";
 
 function App() {
   const error = true;
