@@ -8,6 +8,7 @@ import Handler from "./MyImperative/Handler";
 import MyContext from "./MyContext";
 import Mylist from "./MyList";
 import MyPerformance from "./MyPerformance";
+import MyHook from "./MyHook";
 
 function App() {
   const error = true;
@@ -38,6 +39,8 @@ function App() {
   }
   return (
     <>
+      <h1>Writing Custom Hooks</h1>
+      <MyHook />
       <h1>Performance</h1>
       <MyPerformance />
 
