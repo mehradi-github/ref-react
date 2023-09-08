@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./modal.css";
+import { createPortal } from "react-dom";
 const MyPortal = () => {
   const [isHidden, setIsHidden] = useState(true);
   return (
@@ -16,7 +17,10 @@ const MyPortal = () => {
 };
 
 const Modal = () => {
-  return <p className="modal">Modal</p>;
+  return createPortal(
+    <p className="modal">Modal</p>,
+    document.getElementById("modal-root")
+  );
 };
 
 export default MyPortal;
