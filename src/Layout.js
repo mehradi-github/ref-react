@@ -31,6 +31,9 @@ function Layout() {
           <li>
             <Link to="/hook">Writing Custom Hooks</Link>
           </li>
+          <li>
+            <Link to="/portal">Portals</Link>
+          </li>
         </ul>
       </nav>
 
