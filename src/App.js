@@ -12,6 +12,7 @@ import Counter from "./Counter";
 import Reducer from "./Reducer";
 import MyTimer from "./MyTimer";
 import MyInput from "./MyInput";
+import MyPortal from "./MyPortal";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="list" element={<Mylist />} />
           <Route path="performance" element={<MyPerformance />} />
           <Route path="hook" element={<MyHook />} />
+          <Route path="portal" element={<MyPortal />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
