@@ -2,8 +2,7 @@
 
 - [Getting Started with Create React App](#getting-started-with-create-react-app)
   - [Emmet](#emmet)
-    - [Emmet not working in Visual Studio Code issue \[Solved\]](#emmet-not-working-in-visual-studio-code-issue-solved)
-    - [Only updating the configuration for your current project](#only-updating-the-configuration-for-your-current-project)
+    - [Adding Emmet in Visual Studio Code](#adding-emmet-in-visual-studio-code)
 
 ## Emmet
 
@@ -37,4 +36,3 @@
 ```
 
 For your current project only update the configuration in ".vscode/settings.json".
-
