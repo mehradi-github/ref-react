@@ -5,7 +5,10 @@ const MyPortal = () => {
   const [isHidden, setIsHidden] = useState(true);
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        onClick={() => console.log("Container clicked!")}
+      >
         <button onClick={() => setIsHidden(!isHidden)}>
           {isHidden ? "Show Modal" : "Hide Modal"}
         </button>
